@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"fmt"
-	Image_Fetch "image_download/image_fetch"
 	"log"
 	"os"
 )
@@ -11,12 +10,14 @@ import (
 func main() {
 	fmt.Println("Enter url: ")
 	reader := bufio.NewReader(os.Stdin)
-	url, err := reader.ReadString('\n')
+	str, err := reader.ReadString('\n')
 
 	if err != nil {
 		log.Fatal("Invalid...")
 	}
 
-	msg := Image_Fetch.Fetch_Image(url)
-	fmt.Println(msg)
+	//	url := string(str)
+	//	url := "https://golang.org"
+	//	msg := Image_Fetch.Fetch_Image(url)
+	//	fmt.Println(msg)
 }
