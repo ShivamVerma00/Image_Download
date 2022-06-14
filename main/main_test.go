@@ -7,7 +7,7 @@ import (
 
 func TestFindImages1(t *testing.T) {
 
-	tst := "https://www.geeksforgeeks.org/"
+	tst := "https://www.tftus.com"
 
 	expectedOutput := "done"
 	output := Image_Fetch.Fetch_Image(tst)
