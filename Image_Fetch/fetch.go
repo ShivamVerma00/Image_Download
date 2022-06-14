@@ -27,7 +27,7 @@ func Fetch_Image(url string) string {
 	}
 	html2 := string(html1) // convert slice of bytes to string
 
-	doc, err := html.Parse(strings.NewReader(html2)) //parsing
+	file, err := html.Parse(strings.NewReader(html2)) //parsing
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -46,7 +46,7 @@ func Fetch_Image(url string) string {
 			f(child)
 		}
 	}
-	f(doc)
+	f(file)
 
 	images := result
 
